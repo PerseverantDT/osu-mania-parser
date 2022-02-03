@@ -1,0 +1,25 @@
+{
+    "name": "osu-mania-parser",
+    "description": "A module that converts osu!mania beatmaps into a Javascript Object.",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "type": "commonjs",
+    "scripts": {
+        "build": "tsc",
+        "test": "ts-node ./test/parseBeatmap.spec.ts \"./in/testfile1.osu\" \"outputfile1\" && ts-node ./test/parseBeatmap.spec.ts \"./in/testfile2.osu\" \"outputfile2\" && ts-node ./test/parseBeatmap.spec.ts \"./in/testfile3.osu\" \"outputfile3\" && ts-node ./test/parseBeatmap.spec.ts \"./in/testfile4.osu\" \"outputfile4\"",
+        "prepack": "npm run build",
+        "prepublish": "npm run build"
+    },
+    "keywords": [
+        "osu",
+        "beatmap",
+        "parser"
+    ],
+    "author": "Perseverant Determination",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^17.0.14",
+        "typescript": "^4.5.5"
+    }
+}

@@ -1,0 +1,9 @@
+test/
+node_modules/
+package-lock.json
+.vscode/
+in/
+out/
+*.tgz
+.npmignore
+dist/
