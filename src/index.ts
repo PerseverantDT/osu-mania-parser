@@ -313,10 +313,10 @@ class HitObject {
         let comboColorsSkipped = (type & 0b11100) / 4;
         let hitsoundFlags = parseInt(members[4])
         let hitsounds: HitSound = [];
-        if ((hitsoundFlags & 0b1) !== 1) hitsounds.push('normal')
-        if ((hitsoundFlags & 0b10) !== 1) hitsounds.push('whistle')
-        if ((hitsoundFlags & 0b100) !== 1) hitsounds.push('finish')
-        if ((hitsoundFlags & 0b1000) !== 1) hitsounds.push('clap')
+        if ((hitsoundFlags & 0b1) !== 0) hitsounds.push('normal')
+        if ((hitsoundFlags & 0b10) !== 0) hitsounds.push('whistle')
+        if ((hitsoundFlags & 0b100) !== 0) hitsounds.push('finish')
+        if ((hitsoundFlags & 0b1000) !== 0) hitsounds.push('clap')
         if (hitsounds.length === 0) hitsounds.push('normal')
         if (note) {
             return new HitObject(
