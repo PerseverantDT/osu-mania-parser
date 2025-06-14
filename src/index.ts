@@ -307,9 +307,9 @@ class HitObject {
         let type = parseInt(members[3]);
         let note = false;
         let hold = false;
-        if ((type & 0b1) === 1) note = true;
-        else if ((type & 0b10000000)) hold = true;
-        let newCombo = (type & 0b100) === 1;
+        if ((type & 0b1) !== 0) note = true;
+        else if ((type & 0b10000000) !== 0) hold = true;
+        let newCombo = (type & 0b100) !== 0;
         let comboColorsSkipped = (type & 0b11100) / 4;
         let hitsoundFlags = parseInt(members[4])
         let hitsounds: HitSound = [];
